@@ -1,6 +1,3 @@
-module Main where
-
-import Lib
-
-main :: IO ()
-main = someFunc
+main = do
+    let c = 10
+    print c

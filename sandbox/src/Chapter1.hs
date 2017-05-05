@@ -25,3 +25,4 @@ lostNumbers = [4, 8, 15, 16, 23, 42]
 "ABCDEFG" !! 2
 "ABCDEFG" !! 3
 "ABCDEFG" !! 4
+[3, 2, 1] > [2, 1, 0]
