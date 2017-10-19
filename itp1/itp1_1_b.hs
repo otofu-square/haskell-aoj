@@ -1,6 +1,11 @@
-import           System.Environment
+import           Control.Applicative
+import           Control.Monad
+import           Data.List
 
 main :: IO ()
 main = do
-  args <- getArgs
-  print $ head args
+  x : _ <- (map read . words) <$> getLine
+  print $ cube x
+
+cube :: Int -> Int
+cube x = x * x * x
