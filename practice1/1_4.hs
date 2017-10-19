@@ -4,7 +4,7 @@ sum' (x:xs) = sum' xs + x
 
 product' :: [Int] -> Int
 product' [] = 0
-product' (x:xs) = sum' xs * x
+product' (x:xs) = product' xs * x
 
 take' :: Int -> [Int] -> [Int]
 take' _ [] = []
