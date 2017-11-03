@@ -1,4 +1,4 @@
-import Data.Char
+import           Data.Char
 
 rot13 :: Char -> Char
 rot13 x | ord x >= 78 = chr (ord x - 13)
