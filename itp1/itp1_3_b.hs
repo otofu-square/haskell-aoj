@@ -1,13 +1,13 @@
 import           Control.Applicative
-import           Control.Monad
+import qualified Control.Monad       as Monad
 import           Data.List
 
 main :: IO ()
-main = do
-    arg <- loop 1
-    putStrLn arg
+main = loop 1
 
-loop :: Int -> IO (String)
+loop :: Int -> IO ()
 loop n = do
     arg <- getLine
-    return $ "Case " ++ (show n) ++ ": " ++ arg
+    Monad.when (arg /= "0") $ do
+        putStrLn $ "Case " ++ show n ++ ": " ++ arg
+        loop $ n + 1
